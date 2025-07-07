@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -25,11 +26,25 @@
   <body>
     <header>
       <h1 class="W_Title">Portfolio</h1>
-      <nav id="W_Nav">
-        <a id="about-a" href="/"> <h5>About</h5></a>
-        <a id="project-a" href="/test.html"> <h5>Projects</h5></a>
-        <a id="resume-a" href="/"> <h5>Resume</h5></a>
-      </nav>
+      <div class="nav-wrapper">
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav id="W_Nav" class="nav-links">
+          <a id="about-a" onclick="location.href='#about-text' "
+            ><h5>About</h5></a
+          >
+          <a id="project-a" onclick="location.href='#pros' "
+            ><h5>Projects</h5></a
+          >
+          <a
+            id="resume-a"
+            href="https://raw.githubusercontent.com/tonystark1316/My_Portfolio/main/assets/Naveendran-CV.pdf"
+            download
+            ><h5>Resume</h5></a
+          >
+        </nav>
+      </div>
       <button class="cta" onclick="location.href='#cta-follow'">Contact</button>
     </header>
 
@@ -257,7 +272,7 @@
               <img
                 src="https://raw.githubusercontent.com/tonystark1316/My_Portfolio/main/Images/canva.png"
                 alt="Star"
-                style="width: 53px"
+                style="width: 40px"
               />
               <h3>Canva</h3>
             </div>
@@ -267,7 +282,7 @@
 
       <!-- projects -->
 
-      <section_projects>
+      <section_projects id="pros">
         <h2 class="about-head">Projects</h2>
         <div class="outer">
           <div class="project">
@@ -415,5 +430,11 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("W_Nav").classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
