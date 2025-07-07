@@ -409,3 +409,158 @@ a {
   font-size: 16px;
   font-family: "Quicksand", sans-serif;
 }
+
+
+
+
+/* ======= Responsive Design ======= */
+
+/* Tablets (width ≤ 1024px) */
+@media screen and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  nav {
+    gap: 5vh;
+    padding-right: 0;
+    flex-wrap: wrap;
+  }
+
+  .W_Title {
+    font-size: 32px;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .cta {
+    margin: 10px auto;
+  }
+
+  .W_Hero .Name {
+    font-size: 60px;
+    padding-left: 5%;
+  }
+
+  .Sub_head {
+    font-size: 20px;
+    padding-left: 5%;
+  }
+
+  #dev {
+    font-size: 30px;
+  }
+
+  .about-head {
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 25px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  #about-text {
+    width: 90%;
+    padding-left: 0;
+  }
+
+  .about-image {
+    width: 350px;
+    height: auto;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .skill_grid,
+  .skill_grids {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    padding: 10%;
+  }
+
+  .cta-sec {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* Mobiles (width ≤ 768px) */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .W_Subline h2 {
+    font-size: 14px;
+  }
+
+  .W_Hero .Name {
+    font-size: 40px;
+    padding-left: 5%;
+  }
+
+  .Sub_head {
+    font-size: 18px;
+    padding-left: 5%;
+  }
+
+  #dev {
+    font-size: 25px;
+  }
+
+  .about-head {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+  }
+
+  .about-image {
+    width: 250px;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .outer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .skill_grid,
+  .skill_grids {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 5%;
+  }
+
+  .cta-sec {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feedback-form {
+    width: 90%;
+  }
+
+  .input-sec {
+    width: 90%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about-text {
+    width: 90%;
+    padding-left: 0;
+  }
+}
