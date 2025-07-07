@@ -410,9 +410,6 @@ a {
   font-family: "Quicksand", sans-serif;
 }
 
-
-
-
 /* ======= Responsive Design ======= */
 
 /* Hamburger styles */
@@ -430,14 +427,13 @@ a {
   width: 100%;
 }
 
-
-
 /* Mobiles (width ≤ 768px) */
 @media screen and (max-width: 768px) {
   .hamburger {
     display: block;
-    margin-left: 90%;
+    margin-left: 70%;
     position: relative;
+    padding-right: 5px;
   }
 
   .nav-links {
@@ -486,7 +482,7 @@ a {
 
   .about-head {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 900;
 
     font-family: "Quicksand", sans-serif;
@@ -496,11 +492,16 @@ a {
     background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
 
     border-radius: 40px;
-    margin-left: 35%;
-    margin-right: 35%;
-    margin-top: 20vh;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10vh;
     margin-bottom: 2vh;
     padding: 20px;
+  }
+  .sub-head {
+    text-align: center;
+    font-size: 20px;
+    font-family: "quicksand", sans-serif;
   }
 
   .about-content {
@@ -557,7 +558,7 @@ a {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 15px;
-   
+
     align-items: center;
     justify-items: center;
     padding-left: 20%;
@@ -614,6 +615,29 @@ a {
     display: flex;
     flex-direction: column;
     font-family: "Quicksand", sans-serif;
-    font-size: 12px;
+    font-size: 10px;
+  }
+
+  .outer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+    background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
+  }
+
+  .cta-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    width: 100%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
   }
 }
