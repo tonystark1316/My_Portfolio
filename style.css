@@ -415,152 +415,205 @@ a {
 
 /* ======= Responsive Design ======= */
 
-/* Tablets (width ≤ 1024px) */
-@media screen and (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    height: auto;
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #28282b;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+
+/* Mobiles (width ≤ 768px) */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: 90%;
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    z-index: 100;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 18px;
   }
 
   nav {
-    gap: 5vh;
-    padding-right: 0;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0;
   }
 
-  .W_Title {
-    font-size: 32px;
-    padding-right: 0;
-    text-align: center;
-  }
-
-  .cta {
-    margin: 10px auto;
-  }
-
-  .W_Hero .Name {
-    font-size: 60px;
+  .Name {
+    font-size: 8vw;
     padding-left: 5%;
   }
-
   .Sub_head {
-    font-size: 20px;
+    font-size: 3vw;
     padding-left: 5%;
   }
-
   #dev {
-    font-size: 30px;
+    font-size: 4.4vw;
+    padding-left: 5%;
   }
 
   .about-head {
-    margin-left: 30%;
-    margin-right: 30%;
+    text-align: center;
     font-size: 25px;
+    font-weight: 900;
+
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+
+    color: #ffffff; /* matte_black */
+    background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
+
+    border-radius: 40px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 20vh;
+    margin-bottom: 2vh;
+    padding: 20px;
   }
 
   .about-content {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column-reverse;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   #about-text {
     width: 90%;
-    padding-left: 0;
+
+    font-size: 18px;
+    text-align: justify;
+    color: #28282b; /* matte_black */
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+  }
+  .ap {
+    background-color: rgba(0, 0, 0, 0.073);
+    padding: 33px;
+    border-radius: 50px;
+    margin-left: 0%;
+    margin-right: 5%;
   }
 
   .about-image {
     width: 350px;
-    height: auto;
+    height: 350px;
     margin-left: 0;
     margin-top: 20px;
   }
 
-  .skill_grid,
-  .skill_grids {
-    grid-template-columns: repeat(2, 1fr);
-    height: auto;
-    padding: 10%;
-  }
-
-  .cta-sec {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-
-/* Mobiles (width ≤ 768px) */
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .W_Subline h2 {
-    font-size: 14px;
-  }
-
-  .W_Hero .Name {
-    font-size: 40px;
-    padding-left: 5%;
-  }
-
-  .Sub_head {
-    font-size: 18px;
-    padding-left: 5%;
-  }
-
-  #dev {
-    font-size: 25px;
-  }
-
-  .about-head {
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 20px;
-  }
-
-  .about-image {
-    width: 250px;
-  }
-
-  .project {
+  .skill_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 55px;
+    align-items: center;
+    justify-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
     width: 100%;
+    height: 50vh;
   }
-
-  .outer {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .skill_grid,
   .skill_grids {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: 5%;
-  }
-
-  .cta-sec {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .feedback-form {
-    width: 90%;
-  }
-
-  .input-sec {
-    width: 90%;
-  }
-
-  .about-content {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 15px;
+   
     align-items: center;
+    justify-items: center;
+    padding-left: 20%;
+    padding-right: 10%;
+    width: 100%;
+    height: 20vh;
   }
 
-  #about-text {
-    width: 90%;
-    padding-left: 0;
+  .div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .div3 {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  .div4 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div5 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .div6 {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  .div7 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  /* Skill set */
+  .divs1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .divs2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .divs3 {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6,
+  .div7,
+  .divs1,
+  .divs2,
+  .divs3 {
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
   }
 }
