@@ -684,6 +684,47 @@ hero {
   opacity: 0.1;
   border-radius: 20px;
 }
+.exp {
+  background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
+  border: none;
+  border-radius: 40px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 20%;
+  margin-top: 50px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 900;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  box-shadow: 2px 4px 6px rgba(255, 255, 255, 0.247);
+  position: absolute;
+  top: 62%;
+  left: 34%;
+
+  /* 👇 Breathe animation added */
+  animation: breathe 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(144, 0, 255, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
+  }
+}
 
 
   .about-content {
