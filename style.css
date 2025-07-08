@@ -646,7 +646,7 @@ hero {
 
   
 .profile {
-  width: 30vw;
+  width: 32vw;
   height: 20vh;
   margin-right: 13%;
   margin-top: 10%;
@@ -661,7 +661,7 @@ hero {
 }
 .blur {
   position: absolute;
-  width: 28%;
+  width: 30%;
   height: 21%;
   top: 20%;
   left: 38%;
@@ -676,7 +676,7 @@ hero {
 
 .color {
   position: absolute;
-  width: 27%;
+  width: 29%;
   height: 21%;
   top: 17%;
   left: 48%;
@@ -693,6 +693,7 @@ hero {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-right: 20%;
+  margin-left: 20%;
   margin-top: 50px;
   font-size: 16px;
   font-family: "Raleway", sans-serif;
@@ -704,7 +705,7 @@ hero {
   box-shadow: 2px 4px 6px rgba(255, 255, 255, 0.247);
   position: absolute;
   top: 62%;
-  left: 34%;
+  left: 15%;
 
   /* 👇 Breathe animation added */
   animation: breathe 3s ease-in-out infinite;
