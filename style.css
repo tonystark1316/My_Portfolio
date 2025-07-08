@@ -15,6 +15,7 @@ header {
   color: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
   gap: 20px;
   align-items: center;
+  justify-items: center;
   padding-left: 10px;
   padding-right: 10px;
   justify-content: space-between;
@@ -29,7 +30,7 @@ header {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  padding-right: 10%;
+
   background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -40,7 +41,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 10vh;
-  padding-right: 25%;
+
   font-size: 20px;
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -80,6 +81,47 @@ a {
   color: rgb(255, 255, 255);
   box-shadow: 2px 4px 6px rgba(255, 255, 255, 0.247);
 }
+.exp {
+  background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
+  border: none;
+  border-radius: 40px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 20%;
+  margin-top: 50px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 900;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  box-shadow: 2px 4px 6px rgba(255, 255, 255, 0.247);
+  position: absolute;
+  top: 82%;
+  left: 46%;
+
+  /* 👇 Breathe animation added */
+  animation: breathe 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(144, 0, 255, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
+  }
+}
 
 .cta:hover {
   background: linear-gradient(to right, rgb(0, 132, 255), #00ffc3);
@@ -103,10 +145,20 @@ a {
 
 /* Hero Section */
 
+hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  margin-bottom: 20%;
+}
+
 .W_Hero {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  /* position: absolute; */
 
   width: 100%;
   align-items: flex-start;
@@ -124,19 +176,41 @@ a {
   font-weight: 900;
   color: #28282b;
   padding-left: 10%;
-  padding-top: 10%;
+
   margin-bottom: 0px;
 }
 .Sub_head {
   font-size: 30px;
   font-weight: 900;
-  background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
   display: flex;
   padding-left: 10.5%;
+
+  background: linear-gradient(
+    70deg,
+    rgb(44, 0, 202),
+    rgb(153, 0, 255),
+    rgb(0, 255, 200)
+  );
+  background-size: 200% auto; /* makes it wide enough to animate */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  animation: animateGradient 4s linear infinite;
+}
+
+/* Animation Keyframes */
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #dev {
@@ -148,8 +222,43 @@ a {
 }
 
 .profile {
-  width: 100%;
-  height: 50%;
+  width: 20vw;
+  height: 60vh;
+  margin-right: 13%;
+  margin-top: 10%;
+  border: rgba(0, 0, 0, 0.185) solid 0.2px;
+  border-radius: 20px;
+  box-shadow: #242424 0px 0px 10px 0px;
+  position: absolute;
+  top: 18%;
+  left: 68%;
+  bottom: 20%;
+  right: 40%;
+}
+.blur {
+  position: absolute;
+  width: 19.5%;
+  height: 60%;
+  top: 32%;
+  left: 72%;
+  bottom: 75%;
+  right: 40%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: #24242400 1px solid;
+  border-radius: 20px;
+  box-shadow: #242424 0px 0px 10px 0px;
+}
+
+.color {
+  position: absolute;
+  width: 19.5%;
+  height: 60%;
+  top: 24%;
+  left: 76%;
+  background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
+  opacity: 0.1;
+  border-radius: 20px;
 }
 
 /* About */
@@ -229,7 +338,7 @@ a {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 15px;
+  grid-column-gap: 55px;
   grid-row-gap: 95px;
   align-items: center;
   justify-items: center;
@@ -429,9 +538,26 @@ a {
 
 /* Mobiles (width ≤ 768px) */
 @media screen and (max-width: 768px) {
+  
+  header {
+    
+    height: 6vh;
+    padding: 10px;
+  }
+  .W_Title {
+    font-size: 25px;
+    
+  }
+
+  .cta {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
   .hamburger {
-    display: block;
-    margin-left: 70%;
+    display: flex;
+    
+    justify-items: center;
+    align-items: center;
     position: relative;
     padding-right: 5px;
   }
@@ -446,6 +572,7 @@ a {
     width: 100%;
     position: absolute;
     top: 15%;
+    bottom: 80%;
     left: 0;
     z-index: 100;
     padding: 20px;
@@ -457,23 +584,35 @@ a {
   }
 
   .nav-links a {
-    padding: 10px 0;
+    margin-left: 2%;
+    margin-right: 10%;
     font-size: 18px;
   }
 
   nav {
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px;
     padding: 0;
   }
 
+  .hero-sec {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 80vh;
+  }
+
   .Name {
-    font-size: 8vw;
+    font-size: 10vw;
+    margin-left: 10%;
+    margin-right: 10%;
     padding-left: 5%;
+    margin-top: 20%;
   }
   .Sub_head {
     font-size: 3vw;
-    padding-left: 5%;
+    padding-left: 28%;
   }
   #dev {
     font-size: 4.4vw;
@@ -503,6 +642,49 @@ a {
     font-size: 20px;
     font-family: "quicksand", sans-serif;
   }
+
+
+  
+.profile {
+  width: 30vw;
+  height: 20vh;
+  margin-right: 13%;
+  margin-top: 10%;
+  border: rgba(0, 0, 0, 0.185) solid 0.2px;
+  border-radius: 20px;
+  box-shadow: #242424 0px 0px 10px 0px;
+  position: absolute;
+  top: 18%;
+  left: 30%;
+  bottom: 20%;
+  right: 40%;
+}
+.blur {
+  position: absolute;
+  width: 28%;
+  height: 21%;
+  top: 20%;
+  left: 38%;
+  bottom: 35%;
+  right: 40%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: #24242400 1px solid;
+  border-radius: 20px;
+  box-shadow: #242424 0px 0px 10px 0px;
+}
+
+.color {
+  position: absolute;
+  width: 27%;
+  height: 21%;
+  top: 17%;
+  left: 48%;
+  background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
+  opacity: 0.1;
+  border-radius: 20px;
+}
+
 
   .about-content {
     display: flex;
@@ -546,20 +728,22 @@ a {
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 25px;
     grid-row-gap: 55px;
-    align-items: center;
+    align-items: baseline;
     justify-items: center;
+    justify-content: center;
     padding-left: 20%;
-    padding-right: 20%;
+    padding-right: 10%;
     width: 100%;
     height: 50vh;
   }
+  
   .skill_grids {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 15px;
 
-    align-items: center;
+    align-items: baseline;
     justify-items: center;
     padding-left: 20%;
     padding-right: 10%;
@@ -609,7 +793,7 @@ a {
   .divs1,
   .divs2,
   .divs3 {
-    justify-items: center;
+    justify-items: baseline;
     align-items: center;
     text-align: center;
     display: flex;
@@ -631,7 +815,7 @@ a {
 
   .cta-sec {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15%;
