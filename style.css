@@ -81,7 +81,7 @@ a {
   color: rgb(255, 255, 255);
   box-shadow: 2px 4px 6px rgba(255, 255, 255, 0.247);
 }
-.exp {
+.explore {
   background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
   border: none;
   border-radius: 40px;
@@ -89,8 +89,7 @@ a {
   padding-right: 35px;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-right: 20%;
-  margin-top: 50px;
+
   font-size: 16px;
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -99,9 +98,6 @@ a {
   cursor: pointer;
   color: rgb(255, 255, 255);
   box-shadow: 2px 4px 6px rgba(255, 255, 255, 0.247);
-  position: absolute;
-  top: 82%;
-  left: 46%;
 
   /* 👇 Breathe animation added */
   animation: breathe 3s ease-in-out infinite;
@@ -111,7 +107,7 @@ a {
 @keyframes breathe {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
+    box-shadow: 0 0 15px #9000ff4d;
   }
   50% {
     transform: scale(1.05);
@@ -121,6 +117,14 @@ a {
     transform: scale(1);
     box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
   }
+}
+
+.explore-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+  width: 100%;
 }
 
 .cta:hover {
@@ -151,20 +155,20 @@ hero {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 80vh;
+  height: 20vh;
   margin-bottom: 20%;
+  margin-top: 10%;
 }
 
 .W_Hero {
   display: flex;
   flex-direction: column;
-  /* position: absolute; */
 
   width: 100%;
   align-items: flex-start;
   justify-content: center;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10%;
 
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
@@ -538,15 +542,12 @@ hero {
 
 /* Mobiles (width ≤ 768px) */
 @media screen and (max-width: 768px) {
-  
   header {
-    
     height: 6vh;
     padding: 10px;
   }
   .W_Title {
     font-size: 25px;
-    
   }
 
   .cta {
@@ -555,7 +556,7 @@ hero {
   }
   .hamburger {
     display: flex;
-    
+
     justify-items: center;
     align-items: center;
     position: relative;
@@ -600,7 +601,7 @@ hero {
     align-items: center;
     justify-content: center;
     justify-items: center;
-    height: 80vh;
+    height: 50vh;
   }
 
   .Name {
@@ -608,7 +609,7 @@ hero {
     margin-left: 10%;
     margin-right: 10%;
     padding-left: 5%;
-    margin-top: 20%;
+    margin-top: 50%;
   }
   .Sub_head {
     font-size: 3vw;
@@ -643,91 +644,93 @@ hero {
     font-family: "quicksand", sans-serif;
   }
 
-
-  
-.profile {
-  width: 32vw;
-  height: 20vh;
-  margin-right: 13%;
-  margin-top: 10%;
-  border: rgba(0, 0, 0, 0.185) solid 0.2px;
-  border-radius: 20px;
-  box-shadow: #242424 0px 0px 10px 0px;
-  position: absolute;
-  top: 18%;
-  left: 30%;
-  bottom: 20%;
-  right: 40%;
-}
-.blur {
-  position: absolute;
-  width: 30%;
-  height: 21%;
-  top: 20%;
-  left: 38%;
-  bottom: 35%;
-  right: 40%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: #24242400 1px solid;
-  border-radius: 20px;
-  box-shadow: #242424 0px 0px 10px 0px;
-}
-
-.color {
-  position: absolute;
-  width: 29%;
-  height: 21%;
-  top: 17%;
-  left: 48%;
-  background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
-  opacity: 0.1;
-  border-radius: 20px;
-}
-.exp {
-  background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
-  border: none;
-  border-radius: 40px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-right: 20%;
-  margin-left: 20%;
-  margin-top: 50px;
-  font-size: 16px;
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 900;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  box-shadow: 2px 4px 6px rgba(255, 255, 255, 0.247);
-  position: absolute;
-  top: 62%;
-  left: 15%;
-
-  /* 👇 Breathe animation added */
-  animation: breathe 3s ease-in-out infinite;
-  transition: transform 0.3s ease;
-}
-
-@keyframes breathe {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
+  .profile {
+    width: 150px;
+    height: 200px;
+    margin-right: 13%;
+    margin-top: 10%;
+    border: rgba(0, 0, 0, 0.185) solid 0.2px;
+    border-radius: 20px;
+    box-shadow: #242424 0px 0px 10px 0px;
+    position: absolute;
+    top: 18%;
+    left: 30%;
+    bottom: 20%;
+    right: 40%;
   }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(144, 0, 255, 0.6);
+  .blur {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    top: 20%;
+    left: 38%;
+    bottom: 35%;
+    right: 40%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: #24242400 1px solid;
+    border-radius: 20px;
+    box-shadow: #242424 0px 0px 10px 0px;
   }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
+
+  .color {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    left: 48%;
+    top: 17%;
+    background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
+    opacity: 0.1;
+    border-radius: 20px;
   }
-}
+  .explore {
+    background: linear-gradient(to right, rgb(44, 0, 202), rgb(144, 0, 255));
+    border: none;
+    border-radius: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 900;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    box-shadow: 2px 4px 6px rgba(255, 255, 255, 0.247);
 
+    /* 👇 Breathe animation added */
+    animation: breathe 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+  }
+
+  @keyframes breathe {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(144, 0, 255, 0.6);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(144, 0, 255, 0.3);
+    }
+  }
+
+  .explore-out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
   .about-content {
     display: flex;
     flex-direction: column-reverse;
@@ -778,7 +781,7 @@ hero {
     width: 100%;
     height: 50vh;
   }
-  
+
   .skill_grids {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
